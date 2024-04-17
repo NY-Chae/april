@@ -41,7 +41,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="didTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EI1-QM-rYA"/>
-                                    <segue destination="vM1-NS-Qt4" kind="show" id="JqH-zc-EhE"/>
+                                    <segue destination="vM1-NS-Qt4" kind="show" identifier="goToVC" id="JqH-zc-EhE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -52,6 +52,9 @@
                             <constraint firstItem="rHx-K5-1In" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yba-IP-aYk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="didTap" destination="rHx-K5-1In" id="O9r-7S-kh4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
