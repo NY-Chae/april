@@ -10,29 +10,21 @@ import UIKit
 
 class SeconViewController: UIViewController {
 
-   
+
     @IBOutlet weak var numberLabel: UILabel!
+    
+    var count = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateNumberLabel()
 
-        // Do any additional setup after loading the view.
     }
 
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       let firstVC = segue.destination as? FirstViewController
-
-        firstVC?.plusHandler = {
-            guard let numberStr = self.numberLabel.text,
-                    let number = Int(numberStr)
-            else {return}
-
-            self.numberLabel.text = "\(number + 1)"
-
-
+    
+    func updateNumberLabel() {
+        numberLabel.text = "\(count)"
         }
 
     }
 
-}

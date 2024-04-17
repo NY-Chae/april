@@ -7,21 +7,20 @@
 
 import UIKit
 
+
 class FirstViewController: UIViewController {
-
-    var plusHandler: (() -> ())?
+    var count = 0
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-       
-    }
-
+    // 사용자가 버튼을 탭했을 때 호출되는 액션 메서드
     @IBAction func didTap(_ sender: Any) {
-
-        plusHandler?()
-    }
-        
-}
+    
+        if let secondViewController = storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController {
+                    secondViewController.count = count
+                    present(secondViewController, animated: true, completion: nil)
+                }
+                count += 1
+            }
+        }
 
 
 
