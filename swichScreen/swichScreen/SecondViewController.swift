@@ -1,30 +1,25 @@
-//
-//  SecondViewController.swift
-//  swichScreen
-//
-//  Created by 채나연 on 4/18/24.
-//
 
-import Foundation
+
 import UIKit
 
-class SeconViewController: UIViewController {
-
-
+class SecondViewController: UIViewController {
+    
+    
+    
     @IBOutlet weak var numberLabel: UILabel!
     
-    var count = 0
+    var result = 0
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateNumberLabel()
-
+        
+        numberLabel.text = "\(result)"
+        
+        print(result)
     }
-
     
-    func updateNumberLabel() {
-        numberLabel.text = "\(count)"
-        }
-
-    }
-
+}
+    
+    
+    
